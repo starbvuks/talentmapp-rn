@@ -35,6 +35,11 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderRadius: 30,
     marginTop: 20,
+    shadowColor: "midnightblue",
+    elevation: 12,
+    shadowOffset: { width: -2, height: 4 },
+    shadowOpacity: 0.2,
+    shadowRadius: 12,
 },
 input: {
     flex: 1,

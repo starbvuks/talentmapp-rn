@@ -15,6 +15,14 @@ const DOMAIN_DATA = [
     name: 'Marketing',
     subDomains: ['Content Marketing', 'Social Media Marketing', 'Email Marketing']
   },
+  {
+    name: 'Marketing',
+    subDomains: ['Content Marketing', 'Social Media Marketing', 'Email Marketing']
+  },
+  {
+    name: 'Marketing',
+    subDomains: ['Content Marketing', 'Social Media Marketing', 'Email Marketing']
+  },
 ];
 
 const getRandomInt = (min, max) => {
@@ -24,8 +32,8 @@ const getRandomInt = (min, max) => {
 const Cluster = ({ domain, subDomains, onPress, isSubDomain }) => {
   const [position, setPosition] = useState(
     new Animated.ValueXY({
-      x: getRandomInt(8, 10),
-      y: getRandomInt(16, 20),
+      x: Math.floor(Math.random(-6, 1)*100),
+      y: Math.floor(Math.random()*50),
     })
   );
 
@@ -152,10 +160,10 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   cluster: {
+    position: "absolute",
     paddingHorizontal: 20,
     paddingVertical: 10,
     borderRadius: 100,
-    margin: 10,
     maxWidth: 200
   },
   clusterText: {
